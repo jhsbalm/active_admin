@@ -28,8 +28,7 @@ module ActiveAdmin
             end
 
             active_admin_application.javascripts.each do |path|
-              script :src => "/assets/application.js", :type => "text/javascript" if Rails.env == "development"
-              script :src => javascript_path("jquery"),:type => "text/javascript" if Rails.env == "production"
+              script :src => "/assets/application.js", :type => "text/javascript"
               script :src => javascript_path(path),:type => "text/javascript"
             end
             text_node csrf_meta_tag
