@@ -28,7 +28,7 @@ module ActiveAdmin
             end
 
             active_admin_application.javascripts.each do |path|
-              javascript_include_tag("appliction.js")
+              script :src => "/assets/appliction.js", :type => "text/javascript"
             end
             text_node csrf_meta_tag
           end
